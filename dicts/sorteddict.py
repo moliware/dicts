@@ -27,7 +27,7 @@
 
  >>> sd = SortedDict({'c' : (1,'b'), 'a' : (6,'c'), 'b' : (5,'a')}, key=lambda x: x[1][1])
  >>> sd.items()
-
+ [('b', (5, 'a')), ('c', (1, 'b')), ('a', (6, 'c'))]
 
  author : Miguel Olivares <miguel@moliware.com>
 """
