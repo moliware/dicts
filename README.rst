@@ -3,6 +3,21 @@ dicts
 
 All kind of dictionaries you always think but never do.
 
+Instalation
+-----------
+
+To install dicts form Pypi: ::
+
+  easy_install dicts
+
+or ::
+
+  pip install dicts
+
+if you want to install it from source code: ::
+
+  python setup.py install
+
 
 Usage
 -----
