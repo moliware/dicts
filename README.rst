@@ -61,3 +61,8 @@ Especific dictionaries
     >>> sd = SortedDict({'c' : (1,'b'), 'a' : (6,'c'), 'b' : (5,'a')}, key=lambda x: x[1][1])
     >>> sd.items()
     [('b', (5, 'a')), ('c', (1, 'b')), ('a', (6, 'c'))]
+
+- NoCaseDict
+
+    >>> ncd = NoCaseDict({'examPLE' : 1})
+    >>> 'example' in ncd
