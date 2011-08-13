@@ -1,3 +1,4 @@
+from nocasedict import NoCaseDict
 from sorteddict import *
 from dict import Dict
 
