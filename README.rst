@@ -66,3 +66,4 @@ Especific dictionaries
 
     >>> ncd = NoCaseDict({'examPLE' : 1})
     >>> 'example' in ncd
+    True
