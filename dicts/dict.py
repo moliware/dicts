@@ -44,6 +44,11 @@ class Dict(UserDict, object):
                 self[k] = deepcopy(v)
         return self
 
+    def map(self, callable):
+        """ Apply 'callable' function over all values. """
+        for k,v in self.iteritems():
+            self[k] = callable(v)
+
     @classmethod
     def fromrepetitions(cls, iterable):
         """ Create a dict whose keys are the members of the iterable and values
