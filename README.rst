@@ -30,8 +30,11 @@ Dictionaries Features
     >>> d1 = Dict({1 : 7, 2 : [1,2], 3 : 'a'})
     >>> d1.join({1 : 2, 2 : [3], 3 : 'b'})
     {1: 9, 2: [1, 2, 3], 3: 'ab'}
-   
 
+- fromrepetitions:
+
+    >>> Dict.fromrepetitions([1,1,1,1,2])
+    {1: 4, 2: 1}
 
 Especific dictionaries
 ......................

@@ -28,7 +28,7 @@ from UserDict import UserDict
 
 class Dict(UserDict, object):
     """ Iterable UserDict. It is thought for being
-    the base class of all specific dictionaries
+    the base class of all specific dictionaries.
     """
 
     def __iter__(self):
@@ -43,3 +43,13 @@ class Dict(UserDict, object):
             else:
                 self[k] = deepcopy(v)
         return self
+
+    @classmethod
+    def fromrepetitions(cls, iterable):
+        """ Create a dict whose keys are the members of the iterable and values
+        are the number of times the key appears in the iterable.
+        """
+        d = cls()
+        for key in iterable:
+            d[key] = d[key] + 1 if key in d else 1
+        return d
