@@ -31,6 +31,13 @@ Dictionaries Features
     >>> d1.join({1 : 2, 2 : [3], 3 : 'b'})
     {1: 9, 2: [1, 2, 3], 3: 'ab'}
 
+- map:
+
+    >>> d = Dict({'1' : 1, '2' : 2})
+    >>> d.map(lambda x: 1/3.0)
+    >>> d
+    {'1': 0.3333333333333333, '2': 0.3333333333333333}
+
 - fromrepetitions:
 
     >>> Dict.fromrepetitions([1,1,1,1,2])
