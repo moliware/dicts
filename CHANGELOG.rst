@@ -1,6 +1,10 @@
 Chages
 ======
 
+v 0.2.2 09/2011
+---------------
+ - map feature
+
 v 0.2.1 09/2011
 ---------------
  - fromrepetions feature
