@@ -1,30 +1,16 @@
 # -*- coding: utf-8 -*-
-
 """
- Extends UserDict to implement some awesome features
+    dicts.dict
+    ~~~~~~~~~~
 
- iterable:
+    Extends UserDict to implement some awesome features
 
- >>> d = Dict({1 : 2, 2 : 3})
- >>> for k,v in d:
- >>>     print k,v
- 1 2
- 2 3
-
- join:
-
- >>> d = Dict({1 : 2})
- >>> d.join({1 : 3})
- {1: 5}
-
- >>> d = Dict({1 : 2})
- >>> d.join({1 : [3]})
- {1: [2, 3]}
-
- author : Miguel Olivares <miguel@moliware.com>
+    :copyright: (c) 2011 by  Miguel Olivares <miguel@moliware.com>.
+    :license: LGPL, see LICENSE for more details.
 """
 from copy import deepcopy
 from UserDict import UserDict
+
 
 class Dict(UserDict, object):
     """ Iterable UserDict. It is thought for being

@@ -1,43 +1,26 @@
 # -*- coding: utf-8 -*-
-
 """
- Dictiories that are sorted when they are iterated
+    dict.sorteddict
+    ~~~~~~~~~~~~~~~
 
- KeySortedDict:
+    Dictionaries that are sorted when they are iterated
 
- >>> ksd = KeySortedDict({'c' : 1, 'a' : 6, 'b' : 5})
- >>> ksd.items()
- [('a', 6), ('b', 5), ('c', 1)]
- >>> ksd.keys()
- ['a', 'b', 'c']
- >>> ksd.values()
- [6, 5, 1]
-
- ValueSortedDict
-
- >>> vsd = ValueSortedDict({'c' : 1, 'a' : 6, 'b' : 5})
- >>> vsd.items()
- [('c', 1), ('b', 5), ('a', 6)]
- >>> vsd.keys()
- ['c', 'b', 'a']
- >>> vsd.values()
- [1, 5, 6]
-
- SortedDict
-
- >>> sd = SortedDict({'c' : (1,'b'), 'a' : (6,'c'), 'b' : (5,'a')}, key=lambda x: x[1][1])
- >>> sd.items()
- [('b', (5, 'a')), ('c', (1, 'b')), ('a', (6, 'c'))]
-
- author : Miguel Olivares <miguel@moliware.com>
+    :copyright: (c) 2011 by  Miguel Olivares <miguel@moliware.com>.
+    :license: LGPL, see LICENSE for more details.
 """
-
 from dict import Dict
 
+
 class SortedDict(Dict):
-    """ Dictionary that iterates over its elements """
+    """ Dictionary that iterates over its elements. """
 
     def __init__(self, data={}, cmp=None, key=None, reverse=False):
+        """
+        :param data: dictionary
+        :param cmp: comparison function
+        :param key: function to extract comparison key
+        :param reverse: reverse order
+        """
         super(SortedDict, self).__init__(data)
         self.cmp = cmp
         self.key = key
@@ -74,15 +57,25 @@ class SortedDict(Dict):
     def values(self):
         return [v for v in self.itervalues()]
 
+
 class KeySortedDict(SortedDict):
     """ Dictionary sorted by key """
+
     def __init__(self, data={}, reverse=False):
-        """ """
+        """
+        :param data: dictionary
+        :param reverse: reverse order
+        """
         super(KeySortedDict, self).__init__(data, reverse=reverse)
+
 
 class ValueSortedDict(SortedDict):
     """ Dictionary sorted by value """
+
     def __init__(self, data={}, reverse=False):
-        """ """
+        """
+        :param data: dictionary
+        :param reverse: reverse order
+        """
         super(ValueSortedDict, self).__init__(data, key=lambda x:x[1],
                                                reverse=reverse)
