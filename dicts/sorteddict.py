@@ -50,6 +50,9 @@ class SortedDict(Dict):
         for k,v in sorted_data:
             yield k,v
 
+    def __getslice__(self, i, j):
+        return type(self)(self.items()[i:j])
+
     def iteritems(self):
         for x in self.__iter__():
             yield x
