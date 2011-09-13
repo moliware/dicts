@@ -8,20 +8,20 @@ Ditionaries Usage
 Dict
 ----
 
-.. automethod:: dicts.Dict.join(dic)
+.. automethod:: Dict.join(dic)
 
     >>> d1 = Dict({1 : 7, 2 : [1,2], 3 : 'a'})
     >>> d1.join({1 : 2, 2 : [3], 3 : 'b'})
     {1: 9, 2: [1, 2, 3], 3: 'ab'}
 
-.. automethod:: dicts.Dict.map()
+.. automethod:: Dict.map(callable)
 
     >>> d = Dict({'1' : 1, '2' : 1})
     >>> d.map(lambda x: x/3.0)
     >>> d
     {'1': 0.3333333333333333, '2': 0.3333333333333333}
 
-.. automethod:: dicts.Dict.fromrepetitions(iterable)
+.. automethod:: Dict.fromrepetitions(iterable)
 
     >>> Dict.fromrepetitions([1,1,1,1,2])
     {1: 4, 2: 1}
