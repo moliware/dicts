@@ -8,8 +8,16 @@ Welcome to dicts's documentation!
 
 Dicts is a collection of useful dictionaries that will make your life easier!
 
-User Guide:
+First steps
 -----------
+
+.. toctree::
+    :maxdepth: 2
+
+    user/installation
+
+User Guide
+----------
 
 .. toctree::
     :maxdepth: 2
