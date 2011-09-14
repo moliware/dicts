@@ -8,6 +8,7 @@
     :copyright: (c) 2011 by  Miguel Olivares <miguel@moliware.com>.
     :license: LGPL, see LICENSE for more details.
 """
+import re
 from copy import deepcopy
 from UserDict import UserDict
 
@@ -44,3 +45,10 @@ class Dict(UserDict, object):
         for key in iterable:
             d[key] = d[key] + 1 if key in d else 1
         return d
+
+    def relookup(self, pattern):
+        """ Dictionary lookup with a regular expression. Return pairs whose key 
+        matches pattern.
+        """
+        key = re.compile(pattern)
+        return filter(lambda x : key.match(x[0]), self.data.items())

@@ -26,6 +26,13 @@ Dict
     >>> Dict.fromrepetitions([1,1,1,1,2])
     {1: 4, 2: 1}
 
+.. automethod:: Dict.relookup(pattern)
+
+    >>> d = Dict({'1' : 1, '2' : 1, 'a' : 10, '11' : 20})
+    >>> d.relookup('\d+')
+    [('1', 1), ('2', 1), ('11', 20)]
+
+
 
 
 SortedDict

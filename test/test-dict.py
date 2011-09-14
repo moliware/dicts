@@ -19,5 +19,12 @@ class DictTestCase(unittest.TestCase):
         self.d.join(Dict({1 : 2, 2 : [3], 3 : 'b'}))
         self.assertEqual(self.d.items(), [(1, 9), (2, [1, 2, 3]), (3, 'ab')])
 
+    def test_lookup(self):
+        d = Dict()
+        d['1'] = 10
+        d['2'] = 20
+        d['a'] = 30
+        self.assertEqual(d.relookup('\d+'), [('1', 10), ('2', 20)])
+
 if __name__ == '__main__':
     unittest.main()
