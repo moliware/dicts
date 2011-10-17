@@ -87,7 +87,7 @@ NoCaseDict
 RegexpDict
 ----------
 
-..autoclass :: RegexpDict
+.. autoclass :: RegexpDict
 
     >>> rd = RegexpDict({'\d+' : 1, '\w+': 2})
     >>> rd['1']
