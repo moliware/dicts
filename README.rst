@@ -60,4 +60,4 @@ Especific dictionaries
 
 * RegexpDict
 
-.. _site: dicts.moliware.com
+.. _site: http://dicts.moliware.com
