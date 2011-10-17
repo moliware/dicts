@@ -103,8 +103,3 @@ BiDict
 ------
 
 Keys and values are uniques.
-
-RegexpDict
-----------
-
-Keys are regular expressions.
