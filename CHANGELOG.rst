@@ -1,6 +1,13 @@
 Chages
 ======
 
+v 0.3 10/2011
+-------------
+ - slicing for SortedDict family
+ - relookup feature
+ - RegexpDict
+ - Documentation
+
 v 0.2.2 09/2011
 ---------------
  - map feature
