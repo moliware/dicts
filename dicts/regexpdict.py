@@ -20,4 +20,9 @@ class RegexpDict(Dict):
 
     def __getitem__(self, key):
         """ Returned all values that match key """
-        return [v for k,v in self.iteritems() if re.match(k, key)]   
+        assert(isinstance(key, basestring))
+        return [v for k,v in self.iteritems() if re.match(k, key)]
+
+    def __setitem__(self, key, value):
+        assert(isinstance(key, basestring))
+        return super(RegexpDict, self).__setitem__(key, value)
