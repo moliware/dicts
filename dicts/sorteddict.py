@@ -27,31 +27,31 @@ class SortedDict(Dict):
         self.reverse= reverse
 
     def __iter__(self):
+        return self.iterkeys()
+        
+    def __getslice__(self, i, j):
+        return type(self)(self.items()[i:j])
+
+    def iteritems(self):
         """ Sort and then iterate the dictionary """
         sorted_data = sorted(self.data.iteritems(), self.cmp, self.key,
                              self.reverse)
         for k,v in sorted_data:
             yield k,v
 
-    def __getslice__(self, i, j):
-        return type(self)(self.items()[i:j])
-
-    def iteritems(self):
-        for x in self.__iter__():
-            yield x
 
     def items(self):
         return [x for x in self.iteritems()]
 
     def iterkeys(self):
-        for k,v in self.__iter__():
+        for k,v in self.iteritems():
             yield k
 
     def keys(self):
         return [k for k in self.iterkeys()]
 
     def itervalues(self):
-        for k,v in self.__iter__():
+        for k,v in self.iteritems():
             yield v
 
     def values(self):

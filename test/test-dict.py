@@ -26,5 +26,11 @@ class DictTestCase(unittest.TestCase):
         d['a'] = 30
         self.assertEqual(d.relookup('\d+'), [('1', 10), ('2', 20)])
 
+    def test_iteration(self):
+        d1 = dict(a=1)
+        d2 = Dict(d1)
+        self.assertEqual([x for x in d1], [x for x in d2])
+
+
 if __name__ == '__main__':
     unittest.main()

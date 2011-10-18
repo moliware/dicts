@@ -10,17 +10,13 @@
 """
 import re
 from copy import deepcopy
-from UserDict import UserDict
+from UserDict import IterableUserDict
 
 
-class Dict(UserDict, object):
+class Dict(IterableUserDict, object):
     """ Iterable UserDict. It is thought for being
     the base class of all specific dictionaries.
     """
-
-    def __iter__(self):
-        """ Iterable dictionary! """
-        return self.data.iteritems()
 
     def join(self, dic):
         """ Add dic pairs to self.data """

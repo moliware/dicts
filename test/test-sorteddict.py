@@ -26,5 +26,11 @@ class SortedDictTestCase(unittest.TestCase):
     def test_values(self):
         self.assertEqual(self.sd.values(), [(5, 'a'), (1, 'b'), (6, 'c')])
 
+    def test_iteration(self):
+        d1 = dict(a=1)
+        d2 = SortedDict(d1)
+        self.assertEqual([x for x in d1], [x for x in d2])
+
+
 if __name__ == '__main__':
     unittest.main()
