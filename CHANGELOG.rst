@@ -1,6 +1,10 @@
 Chages
 ======
 
+v 0.3.1 10/2011
+---------------
+ - Fixed bugs
+
 v 0.3 10/2011
 -------------
  - slicing for SortedDict family

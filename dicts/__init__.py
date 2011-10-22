@@ -5,4 +5,4 @@ from dict import Dict
 
 __author__ = "Miguel Olivares"
 __email__ = "miguel@moliware.com"
-__version__ = '0.3'
+__version__ = '0.3.1'
