@@ -15,13 +15,14 @@ import re
 class RegexpDict(Dict):
     """ Keys are regular expressions. """
 
-    def __init__(self, data={}):
+    def __init__(self, data={}, *flags):
         super(RegexpDict, self).__init__(data)
+        self.flags = flags
 
     def __getitem__(self, key):
         """ Returned all values that match key """
         assert(isinstance(key, basestring))
-        return [v for k,v in self.iteritems() if re.match(k, key)]
+        return [v for k,v in self.iteritems() if re.match(k, key, *self.flags)]
 
     def __setitem__(self, key, value):
         assert(isinstance(key, basestring))
